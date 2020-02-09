@@ -130,6 +130,7 @@ private:
  */
 class CustomPropertyManager final {
 public:
+    std::string currentNode = "";
     CustomPropertyManager();
     ~CustomPropertyManager();
 

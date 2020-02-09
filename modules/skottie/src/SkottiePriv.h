@@ -150,6 +150,7 @@ public:
 
         ~AutoPropertyTracker() {
             if (fBuilder->fPropertyObserver) {
+                fBuilder->fPropertyObserver->onLeavingProperty(fBuilder->fPropertyObserverContext);
                 fBuilder->fPropertyObserverContext = fPrevContext;
             }
         }

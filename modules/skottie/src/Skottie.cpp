@@ -400,6 +400,7 @@ void AnimationBuilder::AutoPropertyTracker::updateContext(PropertyObserver* obse
     const skjson::StringValue* name = obj["nm"];
 
     fBuilder->fPropertyObserverContext = name ? name->begin() : nullptr;
+    observer->onEnterNode(fBuilder->fPropertyObserverContext);
 }
 
 } // namespace internal
